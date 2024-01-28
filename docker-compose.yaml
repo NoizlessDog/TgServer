@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  godot:
+    build: .
+    ports:
+      - "8081:8081"
+      - "8081:8081/udp"
+      - "8082:8082"
+      - "8082:8082/udp"
+    tty: true
+    container_name: godot-server
+    network_mode: bridge
